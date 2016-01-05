@@ -74,6 +74,25 @@ $('#myMenu').on('show.bs.context',function () {
 });
 ```
 
+Mobile Browser Support
+-------
+
+When used in mobile browser, the context menu will listen to a long press instead of the right click. 
+In order to be complient with a 'short press', a `onClick` event handler is added. 
+
+```js
+$('#main').contextmenu({
+  target: '#context-menu2',
+  onClick: function(context,e) { 
+    /* Short left click */
+  },
+  onItem: function(context, e) { 
+    /* Right click or long left click */
+  }
+});
+```
+
+
 Example
 -------
 
